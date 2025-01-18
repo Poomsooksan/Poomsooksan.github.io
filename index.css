@@ -1,4 +1,5 @@
-.navbar{
+/* Navbar */
+.navbar {
     position: fixed; 
     top: 30px; 
     left: 0;
@@ -6,6 +7,9 @@
     height: 70px;
     z-index: 9999; 
     transition: top 0.3s ease;
+    display: flex;
+    justify-content: space-between; /* ทำให้โลโก้และปุ่ม toggle อยู่คนละข้าง */
+    align-items: center; /* จัดให้ทุกอย่างอยู่ในแนวเดียวกัน */
 }
 
 .navbar-custom {
@@ -13,19 +17,50 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.navbar-logo {
+    margin-left: 0;
+}
+
 .navbar-logo img {
     height: 40px;
     width: 50px;
-    margin-left: 30%;
 }
 
-@media (max-width:990px){
-    .navbar-logo{
-        margin: 0 auto;
-        display: block;
+/* เปลี่ยนตำแหน่งของ navbar-toggler ให้อยู่ขวามือสุด */
+.navbar-toggler {
+    margin-left: auto; /* ทำให้ navbar-toggler อยู่ทางขวา */
+}
+
+/* Navbar Flexbox จัดตำแหน่ง */
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between; /* ทำให้โลโก้ไปอยู่ทางซ้าย */
+    align-items: center; /* จัดให้ทุกอย่างอยู่ในแนวเดียวกัน */
+}
+
+/* กรณีหน้าจอขนาดเล็ก (แท็บเล็ต) */
+@media (max-width: 991px) {
+    .navbar .container-fluid {
+        justify-content: flex-start; /* ทำให้โลโก้อยู่ซ้าย */
+    }
+
+    .navbar-logo img {
+        margin-left: 10px; /* ปรับระยะห่างจากขอบซ้าย */
     }
 }
 
+/* กรณีหน้าจอขนาดเล็ก (มือถือ) */
+@media (max-width: 576px) {
+    .navbar .container-fluid {
+        justify-content: flex-start; /* ทำให้โลโก้อยู่ซ้ายสุด */
+    }
+
+    .navbar-logo img {
+        margin-left: 10px; /* เพิ่มระยะห่างจากขอบซ้ายถ้าจำเป็น */
+    }
+}
+
+/* เมนู Navbar */
 .nav-link {
     color: white;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -46,6 +81,7 @@
     background-color: #1b4f72;
 }
 
+/* Top bar */
 .top_bar {
     background-color: #f7f9f9;
     width: 100%;
@@ -56,7 +92,6 @@
     position: fixed; 
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 9998;
     transition: top 0.3s ease;
 }
@@ -70,70 +105,27 @@
     transform: translateY(-50%);
 }
 
-
-.top_bar-contact {
-    position: absolute;
-    top: 50%;
-    left: 92%;
-    transform: translate(-50%, -50%);
-    color: black;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;  
-    line-height: 1.2;
-    text-decoration: none;
-}
-
-@media (max-width: 990px){
-    .top_bar-contact{
-        font-size: 10px;
-        top: 50%;
-        left: 90%;
-        display: block;
-    }
-}
-
-@media (max-width: 650px){
-    .top_bar-contact{
-        font-size: 7.5px;
-    }
-}
-
-.top_bar-contact:hover {
-    color: #2e86c1; /* เปลี่ยนสีเมื่อ hover */
-}
-
 .top_bar-social {
     position: absolute;
     top: 50%;
-    left: 85%;
+    right: 0%;
     transform: translateY(-50%) translateX(-50%);
     display: flex;
     justify-content: center;
-    gap: 20px; /* เพิ่มระยะห่างระหว่างไอคอน */
+    gap: 20px; 
+    max-width: 50%;
 }
 
-@media (max-width: 990px) {
-    .top_bar-social{
-        left: 78%;
-    }
-}
-
-.top_bar-social-icon {
+.top_bar-item {
     color: black;
     font-size: 20px; /* ขนาดของไอคอน */
     transition: color 0.3s ease;
+    display: flex;
+    justify-content: center;
 }
 
-
-
-.top_bar-social-icon:hover {
+.top_bar-item:hover {
     color: #2e86c1; /* เปลี่ยนสีเมื่อ hover */
-}
-
-
-.navbar {
-    flex-grow: 1;
 }
 
 /* body */
@@ -150,7 +142,6 @@
         flex: 0 0 100%;
         max-width: 100%;
         height: auto;
-        
     }
 }
 
@@ -176,7 +167,6 @@
     width: 30px;
     margin-top: 220px;
 }
-
 
 .Arrow-slide:hover {
     background-color: rgba(0, 0, 0, 0.2); 
@@ -235,7 +225,6 @@
     transition: transform 1s ease;
 }
 
-
 .carousel-inner {
     padding-left: 5%; 
     padding-right: 5%; 
@@ -243,6 +232,7 @@
     transition: transform 1s ease;
 }
 
+/* Body 2 */
 .body-text1 {
     color: black;
     font-weight: bold;  
