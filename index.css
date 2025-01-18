@@ -19,6 +19,13 @@
     margin-left: 30%;
 }
 
+@media (max-width:990px){
+    .navbar-logo{
+        margin: 0 auto;
+        display: block;
+    }
+}
+
 .nav-link {
     color: white;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -77,6 +84,21 @@
     text-decoration: none;
 }
 
+@media (max-width: 990px){
+    .top_bar-contact{
+        font-size: 10px;
+        top: 50%;
+        left: 90%;
+        display: block;
+    }
+}
+
+@media (max-width: 650px){
+    .top_bar-contact{
+        font-size: 7.5px;
+    }
+}
+
 .top_bar-contact:hover {
     color: #2e86c1; /* เปลี่ยนสีเมื่อ hover */
 }
@@ -91,11 +113,19 @@
     gap: 20px; /* เพิ่มระยะห่างระหว่างไอคอน */
 }
 
+@media (max-width: 990px) {
+    .top_bar-social{
+        left: 78%;
+    }
+}
+
 .top_bar-social-icon {
     color: black;
     font-size: 20px; /* ขนาดของไอคอน */
     transition: color 0.3s ease;
 }
+
+
 
 .top_bar-social-icon:hover {
     color: #2e86c1; /* เปลี่ยนสีเมื่อ hover */
@@ -112,6 +142,16 @@
     padding: 20px;
     height: 550px;
     margin-top: 110px;
+}
+
+@media (max-width: 990px) {
+    .body1 .col-7, 
+    .body1 .col-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: auto;
+        
+    }
 }
 
 .text-left h2, .text-left p {
@@ -148,6 +188,12 @@
     font-size: 1.5rem;
 }
 
+@media (max-width: 1200px){
+    .Arrow-slide{
+        display: none;
+    }
+}
+
 /* carousel-indicators */
 .carousel-indicators {
     display: flex;
@@ -175,6 +221,12 @@
     transition: transform 0.5s ease;
     border-radius: 10px;
     overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 80%;
+    }
 }
 
 .carousel-item-next, 
@@ -220,9 +272,3 @@
     max-width: 35%;
     text-indent: 10%; 
 }
-
-
-
-
-
-
