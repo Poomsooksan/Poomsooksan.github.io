@@ -313,19 +313,19 @@
 
 @media (min-width: 992px) {
     .card-img-top {
-        max-height: 300px;
+        max-height: 400px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .card-img-top {
-        max-height: 250px;
+        max-height: 350px;
     }
 }
 
 @media (max-width: 767px) {
     .card-img-top {
-        max-height: 200px;
+        max-height: 300px;
     }
 }
 
@@ -399,4 +399,10 @@
 
 .footer-custom {
     background-color: #424949;
+}
+
+@media (max-width:600px){
+    .footer_link{
+        display: none;
+    }
 }
