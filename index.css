@@ -157,7 +157,6 @@
 .body1 {
     background-color: white;
     padding: 20px;
-    min-height: 550px;
     height: auto;
     margin-top: 110px;
 }
@@ -193,7 +192,7 @@
     transition: background-color 0.3s, transform 0.3s;
     height: 70px;
     width: 30px;
-    margin-top: 220px;
+    margin-top: 180px;
 }
 
 .Arrow-slide:hover {
@@ -241,11 +240,11 @@
     overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .carousel-item {
-        height: 80%;
+        height: auto;
     }
-}
+}   
 
 .carousel-item-next,
 .carousel-item-prev,
@@ -257,7 +256,15 @@
     padding-left: 5%;
     padding-right: 5%;
     display: flex;
+    align-items: center;
     transition: transform 1s ease;
+    height: 500px;
+}
+
+@media (max-width:600px){
+    .carousel-inner{
+        height: 320px;
+    }
 }
 
 /* Body 2 */
@@ -270,9 +277,7 @@
 .body2 {
     background-color: #85c1e9;
     min-height: 500px;
-    /* ใช้ min-height เพื่อให้แน่ใจว่า body2 มีความสูงอย่างน้อย */
     height: auto;
-    /* ใช้ height: auto เพื่อให้ body2 ขยายตามเนื้อหาภายใน */
     border-radius: 10px;
 }
 
