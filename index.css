@@ -315,7 +315,7 @@
 
 .body2 {
     background-color: #85c1e9;
-    min-height: 480px;
+    min-height: 450px;
     height: auto;
     border-radius: 10px;
 }
@@ -355,6 +355,10 @@
         max-width: 100%;
         height: auto;
     }
+}
+
+.card-text{
+    color: black !important;
 }
 
 .card-img-top {
@@ -498,85 +502,4 @@
     text-align: center;
 }
 
-.ME-1 h1 {
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-    padding-left: 20px;
-    /* padding-bottom: 20px; */
-}
 
-/********************************************** home ********************************************** */
-.home-btn {
-    background-color: #007bff; /* สีน้ำเงินสำหรับปุ่ม */
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 30px;
-    font-weight: bold;
-    text-align: center;
-    display: inline-block;
-    margin-bottom: 5px; /* เพิ่มระยะห่างระหว่างปุ่มและหัวข้อ */
-    transition: background-color 0.3s, transform 0.3s;
-    text-decoration: none; /* เอาเส้นขีดใต้ของลิงก์ออก */
-}
-
-.home-btn:hover {
-    background-color: #0056b3; /* สีเข้มขึ้นเมื่อ hover */
-    transform: scale(1.05); /* ปุ่มขยายเล็กน้อยเมื่อ hover */
-}
-
-.home-btn:active {
-    background-color: #004085; /* สีเข้มที่สุดเมื่อคลิก */
-}
-/********************************************** home ********************************************** */
-
-.ME_list img {
-    /* background-color: #2e86c1; */
-    padding: 5px;
-    object-fit: cover;
-    height: 300px;
-    width: 50%;
-    /* margin-left: 16%; */
-    border: 3px solid #ccc;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.ME_box{
-    
-}
-
-.card-img-top{
-    width: 100%;
-}
-
-.ME_list img:hover {
-    transform: scale(1.005);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.ME_list {
-    overflow: hidden;
-    padding-bottom: 30px;
-    .btn-primary:hover{
-        transform: scale(1.005);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    }
-    
-}
-
-.card-img-top{
-    border-radius: 20px;
-}
-
-.card-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card-title {
-    margin-bottom: 10px;
-}
