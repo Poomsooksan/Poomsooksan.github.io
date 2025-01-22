@@ -97,6 +97,10 @@
     color: #fff;
 }
 
+.dropdown-item:hover{
+    background-color: black;
+}
+
 /* Top bar */
 .top_bar {
     background-color: #f7f9f9;

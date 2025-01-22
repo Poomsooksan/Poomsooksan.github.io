@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-style: hidden;
     
 }
 
@@ -87,3 +88,57 @@
     background-color: #0056b3; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
 }
 
+
+/* Test********************** */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.003);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #5dade2;
+}
+
+.card-body .btn {
+    background-color: #5dade2;
+    color: white;
+}
+
+.card-body .btn:hover {
+    background-color: #2874a6;
+    color: white;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #5dade2;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.card img {
+    box-shadow: none; 
+}
+
+.ME-title {
+    padding: 5px;
+    font-size: 3rem; /* ขนาดฟอนต์ใหญ่เพื่อเน้นหัวข้อ */
+    font-weight: bold;
+    color: #5dade2; /* สีฟ้าสำหรับความโดดเด่น */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* เงาสร้างมิติ */
+    letter-spacing: 2px; /* เพิ่มช่องว่างระหว่างตัวอักษร */
+    text-transform: uppercase; /* แสดงข้อความเป็นตัวพิมพ์ใหญ่ทั้งหมด */
+    background: linear-gradient(to right, #5dade2, #2874a6); /* ไล่สีแบบ gradient */
+    -webkit-background-clip: text; /* ใช้ gradient กับข้อความ */
+    -webkit-text-fill-color: transparent; /* ทำให้ข้อความใสเพื่อโชว์ gradient */
+}
