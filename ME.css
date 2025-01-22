@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .card-body{
@@ -24,9 +25,12 @@
 }
 
 .card-img-top {
-    max-width: 80%; /* Adjust size to your preference */
+    max-width: 80%;
+    max-height:300px; 
     height: auto;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    object-fit: contain;
+    margin-top: 10px !important;
 }
 
 .btn-primary{
@@ -35,7 +39,6 @@
 }
 
 /* Add hover effect for scaling images and buttons */
-.card-img-top:hover,
 .btn-primary:hover {
     transform: scale(1.0015);
     transition: transform 0.3s ease;
@@ -54,5 +57,35 @@
 
 .breadcrumb-item a {
     text-decoration: none;
+}
+
+.container img, .container .btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container .btn:hover {
+    transform: scale(1.005); /* ขยายขนาดเล็กน้อย */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+
+/* สำหรับการตกแต่งรูปภาพ */
+.container img {
+    border-radius: 8px; /* ทำมุมของภาพให้มน */
+    overflow: hidden; /* ป้องกันการแสดงผลของส่วนที่เกินขอบ */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* เงารอบๆ ภาพ */
+}
+
+/* สำหรับการตกแต่งปุ่ม */
+.container .btn {
+    border-radius: 25px; /* มุมปุ่มมน */
+    padding: 10px 20px; /* เพิ่มพื้นที่ภายในปุ่ม */
+    font-weight: bold; /* ตัวหนา */
+    background-color: #007bff; /* สีพื้นหลังปุ่ม */
+    color: white; /* สีข้อความในปุ่ม */
+    border: none; /* ไม่ให้มีขอบ */
+}
+
+.container .btn:hover {
+    background-color: #0056b3; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
 }
 
