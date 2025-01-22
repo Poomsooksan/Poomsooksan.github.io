@@ -68,14 +68,12 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
 }
 
-/* สำหรับการตกแต่งรูปภาพ */
 .container img {
     border-radius: 8px; /* ทำมุมของภาพให้มน */
     overflow: hidden; /* ป้องกันการแสดงผลของส่วนที่เกินขอบ */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* เงารอบๆ ภาพ */
 }
 
-/* สำหรับการตกแต่งปุ่ม */
 .container .btn {
     border-radius: 25px; /* มุมปุ่มมน */
     padding: 10px 20px; /* เพิ่มพื้นที่ภายในปุ่ม */
