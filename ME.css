@@ -6,19 +6,18 @@
     padding-top: 170px !important;
 }
 
-/* Add rounded corners to images */
-.card-img-top {
-    border-radius: 10px;
-    object-fit: cover;
-}
-
 /* Center and resize images */
 .card {
+    /* width: 80%; */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-style: hidden;
-    
+    border: none;
+    /* border-color: black ; */
+    /* border-width: 2px; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card-body{
@@ -32,6 +31,7 @@
     /* margin: 0 auto; */
     object-fit: contain;
     margin-top: 10px !important;
+    border-radius: 10px;
 }
 
 .btn-primary{
@@ -75,11 +75,12 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* เงารอบๆ ภาพ */
 }
 
+/* ********** button menu ********** */
 .container .btn {
     border-radius: 25px; /* มุมปุ่มมน */
     padding: 10px 20px; /* เพิ่มพื้นที่ภายในปุ่ม */
     font-weight: bold; /* ตัวหนา */
-    background-color: #007bff; /* สีพื้นหลังปุ่ม */
+    background-color: #2980b9 ; /* สีพื้นหลังปุ่ม */
     color: white; /* สีข้อความในปุ่ม */
     border: none; /* ไม่ให้มีขอบ */
 }
@@ -90,12 +91,7 @@
 
 
 /* Test********************** */
-.card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
+
 
 .card:hover {
     transform: scale(1.003);
@@ -141,4 +137,13 @@
     background: linear-gradient(to right, #5dade2, #2874a6); /* ไล่สีแบบ gradient */
     -webkit-background-clip: text; /* ใช้ gradient กับข้อความ */
     -webkit-text-fill-color: transparent; /* ทำให้ข้อความใสเพื่อโชว์ gradient */
+}
+
+
+
+.divider {
+    height: 2px;
+    background-color: #3498db;
+    margin: 10px auto;
+    width: 100%;
 }

@@ -38,7 +38,7 @@
     transition: background-color 0.3s, transform 0.3s;
     height: 70px;
     width: 30px;
-    margin-top: 180px;
+    margin-top: 195px;
 }
 
 .Arrow-slide:hover {
@@ -80,7 +80,7 @@
 
 .carousel-item {
     width: 100%;
-    height: 450px;
+    height: 465px;
     /* height: auto; */
     transition: transform 0.5s ease;
     border-radius: 10px;
@@ -226,7 +226,10 @@
     height: auto;
 }
 
+
+
 .product-list {
+    border-style: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,6 +238,7 @@
 }
 
 .product-list img {
+    object-fit: contain;
     width: 300px !important;
     height: 300px;
     border-radius: 10px;
@@ -309,4 +313,6 @@
     justify-content: center;
     text-align: center;
 }
+
+
 
