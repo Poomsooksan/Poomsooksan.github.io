@@ -1,10 +1,8 @@
 /* body */
 .body1 {
     display: inline-block;
-    background-color: white;
     padding: 15px;
     height: auto;
-    margin-top: 120px;
     padding-bottom: 35px;
 }
 
@@ -46,7 +44,6 @@
     }
 }
 
-/* Body 2 */
 .body1_text h2 {
     font-size: 60px;
     color: black;
@@ -87,6 +84,7 @@
     text-align: center;
 }
 
+
 @media(max-width:990px) {
     .body2 h2 {
         font-size: 25px;
@@ -117,13 +115,21 @@
     }
 }
 
+.body2-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .card-text{
     color: black !important;
 }
 
 .card-img-top {
+    padding: 3px;
     width: 100%;
-    height: auto;
+    height: 300px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -146,10 +152,18 @@
     }
 
     .body2-box2 .row {
-        width: 100%;
-        max-width: 500px;
+        width: 95%;
+        /* max-width: 500px; */
     }
 }
+
+@media (max-width: 600px) {
+    .body2-box2 .row {
+        width: 100%;
+        /* max-width: 500px; */
+    }
+}
+
 
 .body3 {
     background-color: white;
@@ -192,11 +206,12 @@
 }
 
 .carousel-item {
-    height: 400px;
+    height: 500px;
     object-fit: contain;
     overflow: hidden;
     border-radius: 8px;
 }
+
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
