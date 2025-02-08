@@ -4,24 +4,33 @@
     display: inline-block;
     padding: 15px;
     height: 87vh;
-    margin-top: 10vh;
+    margin-top: 12vh;
 }
 
 @media (max-width:768px){
     .body1 {
         height: auto;
+        margin-top: 75px;
     }
     .body1_text{
         margin-top: 12px;
         margin-bottom: 12px
     }
+    .carousel-item {
+        height: 60vh !important;
+    }
+    .carousel-inner{
+        margin-right:8px ;
+    }
 
 }
 
-@media (max-width: 600px) {
-    .carousel-item {
-        height: auto;
-    }
+.carousel-item {
+    margin-top: 5vh;
+    height: 75vh;
+    object-fit: contain  !important;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 .carousel-item-next,
@@ -60,14 +69,6 @@
     .body1_text p {
         font-size: 25px;
     }
-}
-
-.carousel-item {
-    margin-top: 5vh;
-    height: 75vh;
-    object-fit: cover !important;
-    overflow: hidden;
-    border-radius: 8px;
 }
 
 @media(max-width:768px){
