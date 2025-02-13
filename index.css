@@ -20,7 +20,9 @@
         height: 60vh !important;
     }
     .carousel-inner{
-        margin-right:8px ;
+        height: 60vh;
+        margin-right:3px !important;
+        margin-left: 3px !important;
     }
 
 }
@@ -68,12 +70,6 @@
 @media(max-width:990px) {
     .body1_text p {
         font-size: 25px;
-    }
-}
-
-@media(max-width:768px){
-    .carousel-item{
-        height: 60vh;
     }
 }
 
