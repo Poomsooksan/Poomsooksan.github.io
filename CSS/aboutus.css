@@ -1,0 +1,5 @@
+.img-fluid{
+    width: 30%;
+    height: auto;
+    object-fit: contain;
+}
