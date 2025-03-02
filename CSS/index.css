@@ -3,8 +3,8 @@
 .body1 {
     display: inline-block;
     padding: 15px;
-    height: 87vh;
-    margin-top: 12vh;
+    height: 86vh;
+    margin-top: 11vh;
 }
 
 @media (max-width:768px){

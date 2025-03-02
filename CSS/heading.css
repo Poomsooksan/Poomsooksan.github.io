@@ -26,7 +26,8 @@
 
 .navbar-logo img {
     height: 40px;
-    width: 50px;
+    width: 60px;
+    border-radius: 5px;
 }
 
 .navbar-toggler {
