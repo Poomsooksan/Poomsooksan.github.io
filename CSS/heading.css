@@ -118,17 +118,6 @@
     transition: top 0.3s ease;
 }
 
-.top_bar-contact {
-    font-size: 15px;
-    text-align: center;
-    font-weight: bold;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
 @media(max-width:600px) {
     .top_bar-contact {
         display: none;
