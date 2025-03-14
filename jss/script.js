@@ -1,7 +1,7 @@
 let lastScrollTop = 0; // ตำแหน่งที่เลื่อนล่าสุด
 const topBar = document.querySelector('.top_bar'); // เลือก top_bar
 const navbar = document.querySelector('.navbar'); // เลือก navbar
-const targetHeight = 100; // ความสูงที่ต้องการให้ top_bar กลับมา (กำหนดได้เอง)
+const targetHeight = 250; // ความสูงที่ต้องการให้ top_bar กลับมา (กำหนดได้เอง)
 
 // ตรวจจับการเลื่อนหน้าเว็บ
 window.addEventListener('scroll', function () {
