@@ -1,22 +1,42 @@
-let lastScrollTop = 0; // ตำแหน่งที่เลื่อนล่าสุด
-const topBar = document.querySelector('.top_bar'); // เลือก top_bar
-const navbar = document.querySelector('.navbar'); // เลือก navbar
-const targetHeight = 250; // ความสูงที่ต้องการให้ top_bar กลับมา (กำหนดได้เอง)
+// document.addEventListener("DOMContentLoaded", function () {
+//     let lastScrollTop = 0;
+//     const topBar = document.querySelector(".top_bar");
+//     const navbar = document.querySelector(".navbar");
 
-// ตรวจจับการเลื่อนหน้าเว็บ
-window.addEventListener('scroll', function () {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    const topBarHeight = topBar.offsetHeight; // ความสูงของ top_bar
+//     window.addEventListener("scroll", function () {
+//         let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-    if (currentScroll > targetHeight) {
-        // ซ่อน top_bar และแสดง navbar เมื่อเลื่อนลงต่ำกว่าความสูงที่กำหนด
-        topBar.style.top = `-${topBarHeight}px`; // ซ่อน top_bar (เลื่อนหายไป)
-        navbar.style.top = "0"; // แสดง navbar แทนที่
-    } else {
-        // แสดง top_bar และเลื่อน navbar กลับไปที่ตำแหน่งเดิมเมื่อเลื่อนขึ้นถึงความสูงที่กำหนด
-        topBar.style.top = "0"; // แสดง top_bar กลับมา
-        navbar.style.top = `${topBarHeight}px`; // ย้าย navbar กลับไปด้านล่างของ top_bar
-    }
+//         if (scrollTop > lastScrollTop) {
+//             // เมื่อเลื่อนลง → ซ่อน top_bar
+//             topBar.style.transform = "translateY(-100%)";
+//             navbar.style.top = "0";
+//         } else {
+//             // เมื่อเลื่อนขึ้น → แสดง top_bar
+//             topBar.style.transform = "translateY(0)";
+//             navbar.style.top = "40px"; // ตำแหน่งที่เคยเป็นของ top_bar
+//         }
+//         lastScrollTop = scrollTop;
+//     });
+// });
 
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // ตรวจสอบว่าค่าของ lastScrollTop ไม่เป็นค่าลบ
+document.addEventListener("DOMContentLoaded", function () {
+    let lastScrollTop = 0;
+    const topBar = document.querySelector(".top_bar");
+    const navbar = document.querySelector(".navbar");
+    const hideHeight = 150; // กำหนดระดับความสูงที่ต้องการให้ top_bar หายไป
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && scrollTop > hideHeight) {
+            // เมื่อเลื่อนลงเกิน hideHeight → ซ่อน top_bar
+            topBar.style.transform = "translateY(-100%)";
+            navbar.style.top = "0";
+        } else if (scrollTop < lastScrollTop) {
+            // เมื่อเลื่อนขึ้น → แสดง top_bar กลับมา
+            topBar.style.transform = "translateY(0)";
+            navbar.style.top = "40px"; // ตำแหน่งที่เคยเป็นของ top_bar
+        }
+        lastScrollTop = scrollTop;
+    });
 });

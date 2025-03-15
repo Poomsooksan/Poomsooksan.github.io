@@ -1,10 +1,11 @@
 /* ******************************************************************  body-1  ************************************************** */
 
 .body1 {
-    display: inline-block;
-    padding: 15px;
-    height: 86vh;
-    margin-top: 11vh;
+    margin-top: 100px;
+    /* display: inline-block; */
+    /* padding: 15px; */
+    height: auto;
+    /* margin-top: 11vh; */
 }
 
 @media (max-width:768px){
@@ -28,7 +29,8 @@
 }
 
 .carousel-item {
-    margin-top: 5vh;
+    /* margin-top: 3vh; */
+    margin-bottom: 3vh;
     height: 75vh;
     object-fit: contain  !important;
     overflow: hidden;
