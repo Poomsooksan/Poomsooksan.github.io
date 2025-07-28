@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smile Plus Rental Co., Ltd</title>
+    <title>Smile plus rental co.ltd</title>
+    <!-- fontstyle -->
+     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -14,29 +16,67 @@
 </head>
 
 <body>
-    <div class="top_bar">
-        <!-- <a class="top_bar-contact" href="#">สนใจติดต่อ <br> 0xx-xxx-xxxx</a> -->
-        <div class="top_bar-contact">
-            <a class="topbar_text" href="tel:0xx-xxx-xxxx" target="_blank">สนใจติดต่อ โทร: 0xx-xxx-xxxx </a>
+    <div class="top_bar d-flex align-items-center"
+        style="background-color: #ffffff; height: 40px; padding: 0 20px; width: 100%; justify-content: space-between;">
+        <div class="d-flex align-items-center">
+            <div class="dropdown me-3">
+                <button class="btn btn-light dropdown-toggle p-1" type="button" id="languageDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <span id="current-flag">🇹🇭</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" onclick="changeLanguage('th')">
+                            <span class="me-2">TH</span> ภาษาไทย
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" onclick="changeLanguage('en')">
+                            <span class="me-2">US</span> English
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="top_bar-item ms-3">
+                <a class="topbar_text d-flex align-items-center" href="tel:+6692-924-6812" target="_blank">
+                    <i class="bi bi-telephone-fill text_icon" style="color: #000000; font-size: 18px;">
+                    </i>
+                    <span style="font-size: 10px; font-weight: bold;">
+                        +6692-924-6812
+                    </span>
+                </a>
+                <a class="topbar_text ms-3 d-flex align-items-center" href="mailto:Smileplus@gmail.com" target="_blank">
+                    <i class="bi bi-envelope-fill text_icon" style="color: #000000; font-size: 18px;">
+                    </i>
+                    <span style="font-size: 10px; margin-left: 3px; font-weight: bold;">
+                        Email: Smileplus@gmail.com
+                    </span>
+                </a>
+            </div>
         </div>
 
-        <div class="top_bar-item top_bar-social">
-            <a class="top_bar-item top_bar-social-icon" href="https://www.facebook.com/profile.php?id=61571227013520" target="_blank">
-                <i class="bi bi-facebook"></i>
-            </a>
-            <a class="top_bar-item top_bar-social-icon" href="https://line.me/ti/p/yourLineID" target="_blank">
-                <i class="bi bi-line"></i>
-            </a>
-            <a class="top_bar-item top_bar-social-icon" href="tel:0xx-xxx-xxxx" target="_blank">
-                <i class="bi bi-telephone"></i>
-            </a>
+        <div class="d-flex me-4" style="margin-left: auto;">
+            <div class="top_bar-item top_bar-social">
+                <a class="top_bar-item top_bar-social-icon"
+                    href="https://www.facebook.com/profile.php?id=61571227013520" target="_blank">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a class="top_bar-item top_bar-social-icon" href="https://line.me/ti/p/yourLineID" target="_blank">
+                    <i class="bi bi-line"></i>
+                </a>
+                <a class="top_bar-item top_bar-social-icon" href="https://www.youtube.com/channel/your_channel_id"
+                    target="_blank">
+                    <i class="bi bi-youtube"></i>
+                </a>
+            </div>
         </div>
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
         <div class="container-fluid">
-            <a class="navbar-logo" href="../index.html">
-                <img src="https://facilities.unc.edu/wp-content/uploads/sites/256/2021/11/demolition.png" alt="logo">
+            <a class="navbar-logo ms-2" href="../index.html">
+                <img src="../image/logo3.jpg" alt="logo" class="Logo_img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,32 +84,30 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../index.html">หน้าหลัก</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">เกี่ยวกับเรา</a>
+                    <li class="nav-item active ms-3">
+                        <a id="nav_about" class="nav-link active" href="#">เกี่ยวกับเรา</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" aria-expanded="false" id="dropdown01"
-                            data-bs-toggle="dropdown" aria-haspopup="true">เครื่องจักร</a>
+                        <a id="nav_machine" class="nav-link inactive dropdown-toggle" href="#" aria-expanded="false"
+                            id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true">เครื่องจักร</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="../page/Machine.html">รถกระเช้า Boom Lift</a>
-                            <a class="dropdown-item" href="../page/Machine2.html">ลิฟท์ขากรรไกร X-Lift</a>
+                            <a id="nav_boom" class="dropdown-item" href="./page/Machine.html">รถกระเช้า Boom Lift</a>
+                            <a id="nav_x" class="dropdown-item" href="./page/Machine2.html">ลิฟท์ขากรรไกร X-Lift</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../page/news.html">ข่าวสาร เเละประชาสัมพันธ์</a>
+                        <a id="nav_news" class="nav-link inactive" href="./page/news.html">ข่าวสาร เเละประชาสัมพันธ์</a>
                     </li>
                 </ul>
                 <form class="d-flex ms-auto" role="search">
                     <input class="form-control me-2" type="search" placeholder="" aria-label="search">
-                    <button class="btn btn-outline-success" type="submit"
-                        style="background-color:#5dade2; color: azure;">search</button>
+                    <button id="nav_seach" class="btn btn-outline-success" type="submit"
+                        style="background-color:#d5d5d5; color: rgb(0, 0, 0); font-weight: 600;"> ค้นหา</button>
                 </form>
             </div>
         </div>
     </nav>
+
 
     <!-- Hero Section -->
     <section class="hero bg-light py-5" style="margin-top: 100px;">
