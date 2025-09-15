@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smile plus rental co.ltd</title>
     <!-- fontstyle -->
-     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -38,18 +39,18 @@
                 </ul>
             </div>
 
-            <div class="top_bar-item ms-3">
+            <div class="top_bar-item ms-md-3">
                 <a class="topbar_text d-flex align-items-center" href="tel:+6692-924-6812" target="_blank">
                     <i class="bi bi-telephone-fill text_icon" style="color: #000000; font-size: 18px;">
                     </i>
-                    <span style="font-size: 10px; font-weight: bold;">
+                    <span class="contact_text" style="font-size: 10px; font-weight: bold;">
                         +6692-924-6812
                     </span>
                 </a>
                 <a class="topbar_text ms-3 d-flex align-items-center" href="mailto:Smileplus@gmail.com" target="_blank">
                     <i class="bi bi-envelope-fill text_icon" style="color: #000000; font-size: 18px;">
                     </i>
-                    <span style="font-size: 10px; margin-left: 3px; font-weight: bold;">
+                    <span class="contact_text" style="font-size: 10px; margin-left: 3px; font-weight: bold;">
                         Email: Smileplus@gmail.com
                     </span>
                 </a>
@@ -73,88 +74,101 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom">
         <div class="container-fluid">
             <a class="navbar-logo ms-2" href="../index.html">
                 <img src="../image/logo3.jpg" alt="logo" class="Logo_img">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="navbar-toggler ms-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active ms-3">
-                        <a id="nav_about" class="nav-link active" href="#">เกี่ยวกับเรา</a>
+                    <li class="nav-item about">
+                        <a id="nav_about" class="nav-link active" href="./Aboutus.html"
+                            style="color: #bdbaba;">เกี่ยวกับเรา</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a id="nav_machine" class="nav-link inactive dropdown-toggle" href="#" aria-expanded="false"
                             id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true">เครื่องจักร</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a id="nav_boom" class="dropdown-item" href="./page/Machine.html">รถกระเช้า Boom Lift</a>
-                            <a id="nav_x" class="dropdown-item" href="./page/Machine2.html">ลิฟท์ขากรรไกร X-Lift</a>
+                        <div class="dropdown-menu animated-dropdown" aria-labelledby="dropdown01">
+                            <a id="nav_boom" class="dropdown-item" href="./Machine.html">รถกระเช้า Boom Lift</a>
+                            <a id="nav_x" class="dropdown-item" href="./Machine2.html">ลิฟท์ขากรรไกร X-Lift</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a id="nav_news" class="nav-link inactive" href="./page/news.html">ข่าวสาร เเละประชาสัมพันธ์</a>
+                        <a id="nav_news" class="nav-link inactive" href="./news.html">ข่าวสาร เเละประชาสัมพันธ์</a>
                     </li>
                 </ul>
-                <form class="d-flex ms-auto" role="search">
+                <form class="order-3 ms-auto search-form-Labtop" role="search">
                     <input class="form-control me-2" type="search" placeholder="" aria-label="search">
                     <button id="nav_seach" class="btn btn-outline-success" type="submit"
                         style="background-color:#d5d5d5; color: rgb(0, 0, 0); font-weight: 600;"> ค้นหา</button>
                 </form>
             </div>
         </div>
+        <div class="search-container">
+            <!-- ปุ่มไอคอนค้นหา -->
+            <button class="search-icon search-form-mobile" onclick="toggleSearchForm()">
+                <i class="bi bi-search"></i>
+            </button>
+
+            <!-- แบบฟอร์มค้นหา -->
+            <form class="search-form" id="searchForm">
+                <input type="text" placeholder="พิมพ์เพื่อค้นหา...">
+                <button type="submit">ค้นหา</button>
+            </form>
+        </div>
+
+        <div class="logo">
+            <a href="#">
+                <img src="../image/logo3.jpg" alt="logo" class="Logo_md">
+            </a>
+        </div>
     </nav>
+
+    <!-- ************************************************************************************************ -->
 
 
     <!-- Hero Section -->
-    <section class="hero bg-light py-5" style="margin-top: 100px;">
-        <div class="container text-center">
-            <h1 class="display-4">เกี่ยวกับเรา</h1>
-            <p class="lead">เราเป็นบริษัทที่มุ่งมั่นในการให้บริการคุณภาพสูงเพื่อความพึงพอใจของลูกค้า</p>
+    <section class="hero bg-light py-5" style="margin-top: 105px;margin-bottom: 5px;">
+        <div class="container text-center hero_caption">
+            <h1 class="Main">เกี่ยวกับเรา</h1>
+            <p class="Subheadings">บริษัท Smile plus จำกัด</p>
         </div>
     </section>
 
-    <!-- About Us Content -->
-    <section class="about-us py-5">
-        <div class="container">
-            <div class="row">
+    <section class="content container-fluid">
+        <div class="card mb-3">
+            <div class="row g-0">
                 <div class="col-md-6">
-                    <h2>ประวัติของเรา</h2>
-                    <p>บริษัท Smile Plus ก่อตั้งขึ้นในปี 2024 ด้วยความมุ่งมั่นในการให้บริการที่มีคุณภาพและเป็นมืออาชีพในทุกๆ ด้าน เรามุ่งเน้นไปที่การสร้างนวัตกรรมใหม่ๆ และการพัฒนาอย่างต่อเนื่อง เพื่อสร้างความพึงพอใจให้กับลูกค้า</p>
+                    <img src="../image/Aboutus_content.png" class="img-fluid rounded-start Aboutus_content" alt="Image">
                 </div>
                 <div class="col-md-6">
-                    <h2>พันธกิจและวิสัยทัศน์</h2>
-                    <p>พันธกิจของเราคือการนำเสนอผลิตภัณฑ์และบริการที่มีคุณภาพดีที่สุด เพื่อให้ลูกค้าได้รับประสบการณ์ที่ยอดเยี่ยม เรามีวิสัยทัศน์ในการเป็นผู้นำในอุตสาหกรรมและสร้างการเปลี่ยนแปลงในทิศทางที่ดีขึ้น</p>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">บริษัท สมายพลัส ก่อตั้งในปี 2020 สำนักงานอยู่ที่ อำเภอ บางบ่อ จังหวัด สมุทรปราการ เป็นผู้ให้บริการจัดหาเครื่องจักร
+                    สำหรับทำงานในพื้นที่สูง ไม่ว่จะเป็นรถกระเช้า(Boomlift) หรือรถลิฟย์ขากรรไกร(X-Lift) พร้อมด้วยคำเเนะนำ
+                    เเละการอบรมการใช้งานจากทีมงานที่เชี่ยวชาญ เพื่อสร้างความสะดวก เเละความปลอดภัยในการทำงานของลูกค้า
+                    ไม่ว่าจะเป็นงานก่อสร้าง งานอุตสาหกกรม หรืองานในคลังสินค้า</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+        <!-- <div class="row">
+            <div class="container col-6 row1_left">
+                <p>บริษัท สมายพลัส ก่อตั้งในปี 2020 สำนักงานอยู่ที่ อำเภอ บางบ่อ จังหวัด สมุทรปราการ เป็นผู้ให้บริการจัดหาเครื่องจักร
+                    สำหรับทำงานในพื้นที่สูง ไม่ว่จะเป็นรถกระเช้า(Boomlift) หรือรถลิฟย์ขากรรไกร(X-Lift) พร้อมด้วยคำเเนะนำ
+                    เเละการอบรมการใช้งานจากทีมงานที่เชี่ยวชาญ เพื่อสร้างความสะดวก เเละความปลอดภัยในการทำงานของลูกค้า
+                    ไม่ว่าจะเป็นงานก่อสร้าง งานอุตสาหกกรม หรืองานในคลังสินค้า</p>
+            </div>
+            <div class="container col-6 row1_right">
 
-    <!-- Team Section -->
-    <section class="team bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">ทีมงานของเรา</h2>
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="img-fluid rounded-circle mb-3" alt="Team Member">
-                    <h4>นางสาว XXXX XXXX</h4>
-                    <p>หัวหน้าฝ่าธุรการ เเละทรัพยากรบุคคล</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="img-fluid rounded-circle mb-3" alt="Team Member">
-                    <h4>นางสาว XXXX XXXX</h4>
-                    <p>ผู้บริหารบริษัทสไมลพลัส</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="img-fluid rounded-circle mb-3" alt="Team Member">
-                    <h4>นาย XXXX XXXX</h4>
-                    <p>หัวหน้าฝ่ายซ่อมบำรุง เเละการขนส่ง</p>
-                </div>
             </div>
-        </div>
+        </div> -->
+
     </section>
 
     <!-- footer -->
@@ -184,7 +198,8 @@
                     <p><i class="bi bi-telephone"></i> โทร: 0xx-xxx-xxxx</p>
                     <p><i class="bi bi-envelope"></i> อีเมล: contact@smileplus.co.th</p>
                     <div>
-                        <a href="https://www.facebook.com/profile.php?id=61571227013520" target="_blank" class="text-white me-2">
+                        <a href="https://www.facebook.com/profile.php?id=61571227013520" target="_blank"
+                            class="text-white me-2">
                             <i class="bi bi-facebook"></i>
                         </a>
                         <a href="https://line.me/ti/p/yourLineID" target="_blank" class="text-white me-2">

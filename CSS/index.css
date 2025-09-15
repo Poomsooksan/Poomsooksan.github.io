@@ -1,5 +1,6 @@
 /* CSS Variables for consistent styling */
 :root {
+  color-scheme: light only;
   /* Colors */
   --primary-color: #1e2128;
   --secondary-color: #ffffff;
@@ -358,6 +359,17 @@
   display: none;
 }
 
+.description_btn {
+  color:#444647;
+  text-decoration:none;
+  padding-top: 0;
+
+}
+
+.description_btn.hover {
+  color:rgb(21, 81, 138)
+}
+
 
 /* ==================== RESPONSIVE DESIGN ==================== */
 
@@ -453,7 +465,7 @@
 }
 
 .body2-box p {
-  line-height: 2;
+  line-height: 2.2;
   padding-left: 1rem;
   font-size: 15px;
   max-width: 95%;
@@ -1290,7 +1302,7 @@
 }
 
 .image-container_safety img {
-  object-position: 0% 25%;
+  object-position: 40% 50%;
   object-fit: cover;
   width: 100%;
   height: 26.25rem;
@@ -1318,6 +1330,7 @@
 
 .description-text p {
   font-size: var(--font-lg);
+  margin-bottom: 2px;
 }
 
 .description-text h3 {

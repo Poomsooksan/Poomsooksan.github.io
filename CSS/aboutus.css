@@ -1,5 +1,58 @@
-.img-fluid{
-    width: 30%;
-    height: auto;
-    object-fit: contain;
+:root {
+    color-scheme: light only;
+
+    /* font-family styles */
+    --font-primary: "Noto Sans Thai Looped", sans-serif;
+    --font-secondary: "Kanit", sans-serif;
+    --font-accent: "Zen Antique", serif;
+    --font-decorative: "Volkhov", serif;
+
+    /* font size */
+    --size-heading: 4.7rem;
+    --size-subheading: 2.2rem;
+    --size-body: 1.2rem;
 }
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    background-image: url(../image/about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+}
+
+.hero_caption {
+    color: #e0dddd;
+    font-family: var(--font-decorative);
+    font-weight: 600;
+}
+
+.Main {
+    font-size: var(--size-heading);
+    font-weight: 800;
+}
+
+.Subheadings {
+    font-size: var(--size-subheading);
+}
+
+.Aboutus_content {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;  
+    object-position: 0% 70%;  
+}
+
+/* .row1_left,
+.row1_right {
+    padding-block: 1rem;
+}
+
+.row1_left p {
+    font-family: var(--font-decorative);
+    font-size: var(--size-body);
+    text-align: center;
+} */
