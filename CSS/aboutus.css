@@ -39,20 +39,30 @@
     font-size: var(--size-subheading);
 }
 
-.Aboutus_content {
+.Aboutus_IMG_1 {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;  
+    object-position: 0% 60%; 
+}
+
+
+.Aboutus_IMG_2 {
     max-height: 400px;
     object-fit: cover;
     width: 100%;  
     object-position: 0% 70%;  
 }
 
-/* .row1_left,
-.row1_right {
-    padding-block: 1rem;
+.row1_text,
+.row2_text {
+    font-family: var(--font-secondary)
 }
 
-.row1_left p {
-    font-family: var(--font-decorative);
-    font-size: var(--size-body);
-    text-align: center;
-} */
+.card-body h5 {
+    font-size: 2.3rem;
+}
+
+.card-body P {
+    font-size: 1.2rem;
+}
