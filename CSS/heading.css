@@ -35,7 +35,7 @@
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     .top_bar-item,
     .text_icon {
@@ -79,9 +79,13 @@
 }
 
 .navbar-logo img {
-    height: 40px;
-    width: 60px;
+    height: 35px;
+    width: 75px;
     border-radius: 5px;
+}
+
+.nav-link:focus {
+    color: white;
 }
 
 .navbar-toggler {
@@ -122,7 +126,7 @@
     border-radius: 5px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 767px) {
     .nav-link.inactive:hover {
         color: black !important;
         font-weight: 500;
@@ -203,7 +207,8 @@
     }
 }
 
-@media(max-width:768px) {
+@media(max-width:767px) {
+
     .Logo_img {
         display: none;
     }
@@ -244,11 +249,11 @@
 
 /* ************ Logo on navbar *********** */
 .Logo_img {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .Logo_img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .Logo_md {
@@ -292,7 +297,7 @@
         left: 2000px !important;
 } */
 
-@media(max-width:768px) {
+@media(max-width:767px) {
 
     .navbar-nav .nav-item.dropdown .dropdown-menu {
         background-color: rgb(255, 255, 255);
@@ -409,3 +414,10 @@
 }
 
 /* -------------------------------------- */
+
+.dropdown-toggle:focus,
+.dropdown-toggle:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
